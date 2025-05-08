@@ -43,8 +43,7 @@ const books = [
   console.log(finalRate);
 
 //problem-3
-concatenateArrays(["a", "b"], ["c"]);       
-concatenateArrays([1, 2], [3, 4], [5]); 
+
 
 function concatenateArrays<T>(...arrays: T[][]): T[] {
     const result: T[] = [];
@@ -52,8 +51,11 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
         result.push(...array);
     }
     return result;
-    console.log(result);
+    
 }
+const fullArray=concatenateArrays(["a", "b"], ["c"]);       
+
+console.log(fullArray);
 
 //problem-4
 class Vehicle {
@@ -90,59 +92,11 @@ class Vehicle {
         return value*2
     }
   }
-  processValue("hello"); // Output: 5
- processValue(10);      // Output: 20
+  const lengthOfValue=processValue("hello"); 
+  console.log(lengthOfValue);
+      
 
-//problem-6
-interface Product {
-    name: string;
-    price: number;
-  }
-  
-  function getMostExpensiveProduct(products: Product[]): Product | null {
-    if (products.length === 0) return null;
-    
-    let mostExpensive = products[0];
-    
-    for (let i = 1; i < products.length; i++) {
-      if (products[i].price > mostExpensive.price) {
-        mostExpensive = products[i];
-      }
-    }
-    
-    return mostExpensive;
-  }
-  //problem-7
-  enum Day {
-    Monday,
-    Tuesday,
-    Wednesday,
-    Thursday,
-    Friday,
-    Saturday,
-    Sunday
-  }
-  
-  function getDayType(day: Day): string {
-    if (day === Day.Friday) {
-      return "Weekend";
-    } else {
-      return "Weekday";
-    }
-  }
-   //problem-8
-   
-   async function squareAsync(n: number): Promise<number> {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (n < 0) {
-                reject(new Error("Negative number not allowed"));
-            } else {
-                resolve(n * n);
-            }
-        }, 1000);
-    });
-}
+
 
 }
 
