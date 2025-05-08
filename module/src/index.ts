@@ -1,5 +1,5 @@
 {
-    //problem-1
+    
 
     function formatString(input: string, toUpper?: boolean): string{
         if (toUpper===true || toUpper===undefined) {
@@ -10,16 +10,12 @@
         }
     }
 
-    const firstOutput=formatString("Hello");   //output//
-    console.log(firstOutput);
-
-    const secondOutput=formatString("Hello",true);    //output//
+    const secondOutput=formatString("Hello",true);   
     console.log(secondOutput);
 
-    const thirdOutput=formatString("Hello", false);    //output//
-    console.log(thirdOutput);
 
-//problem-2
+
+
 
 const books = [
     { title: "Book A", rating: 4.5 },
@@ -38,11 +34,12 @@ const books = [
     return items.filter(highRate);
 }
 
- 
-  const finalRating=filterByRating(books);  //output//
+const finalRating=filterByRating(books);  
   console.log(finalRating);
 
-//problem-3
+
+
+
 
 
 function concatenateArrays<T>(...arrays: T[][]): T[] {
@@ -58,12 +55,13 @@ const fullArray=concatenateArrays(["a", "b"], ["c"]);    //output//
 console.log(fullArray);
 
 
-//problem-4
+
+
 
   
 
 
-  //problem-5
+  
   function processValue(value: string | number): number{
     if (typeof value== 'string') {
         return value.length
@@ -73,17 +71,18 @@ console.log(fullArray);
     }
   }
 
-  const finalValue=processValue("hello");    //output//
+  const finalValue=processValue("hello");   
   console.log(finalValue);
       
 
-//problem-6
+
+
+
 const products = [
   { name: "Pen", price: 10 },
   { name: "Notebook", price: 25 },
   { name: "Bag", price: 50 }
 ];
-
 interface Product {
   name: string;
   price: number;
@@ -101,10 +100,14 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
   return highPrice;
 }
 
-const expensiveProduct = getMostExpensiveProduct(products);  //output//
+const expensiveProduct = getMostExpensiveProduct(products);  
 console.log(expensiveProduct);
 
-  //problem-7
+
+
+
+
+  
   enum Day {
     Monday,
     Tuesday,
@@ -123,11 +126,12 @@ console.log(expensiveProduct);
     }
   }
 
-  const dayOfWeek=getDayType(Day.Monday);   //output//
+  const dayOfWeek=getDayType(Day.Monday);   
   console.log(dayOfWeek);
 
   
-   //problem-8
+ 
+
    
 
 async function squareAsync(n: number): Promise<number>{
@@ -143,7 +147,8 @@ async function squareAsync(n: number): Promise<number>{
       }
   })
 }
-squareAsync(4).then(console.log);  //output//
+squareAsync(4).then(console.log);  
+
 
 }
 
