@@ -47,13 +47,13 @@ concatenateArrays(["a", "b"], ["c"]);
 concatenateArrays([1, 2], [3, 4], [5]); 
 
 function concatenateArrays<T>(...arrays: T[][]): T[] {
-    let result: T[] = [];
-    for (const arry of arrays) {
-        result.push(...arry);
+    const result: T[] = [];
+    for (const array of arrays) {
+        result.push(...array);
     }
     return result;
+    console.log(result);
 }
-
 
 //problem-4
 class Vehicle {
@@ -144,5 +144,6 @@ interface Product {
     });
 }
 
-
 }
+
+
